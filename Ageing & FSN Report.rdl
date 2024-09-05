@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ItemCategoryCode_Item">
+          <DataField>ItemCategoryCode_Item</DataField>
+        </Field>
+        <Field Name="BaseUnitofMeasure_Item">
+          <DataField>BaseUnitofMeasure_Item</DataField>
+        </Field>
+        <Field Name="No_Item">
+          <DataField>No_Item</DataField>
+        </Field>
+        <Field Name="Description_Item">
+          <DataField>Description_Item</DataField>
+        </Field>
+        <Field Name="Critical_Item">
+          <DataField>Critical_Item</DataField>
+        </Field>
+        <Field Name="HeaderText7">
+          <DataField>HeaderText7</DataField>
+        </Field>
+        <Field Name="HeaderText6">
+          <DataField>HeaderText6</DataField>
+        </Field>
+        <Field Name="HeaderText5">
+          <DataField>HeaderText5</DataField>
+        </Field>
+        <Field Name="HeaderText4">
+          <DataField>HeaderText4</DataField>
+        </Field>
+        <Field Name="HeaderText3">
+          <DataField>HeaderText3</DataField>
+        </Field>
+        <Field Name="HeaderText2">
+          <DataField>HeaderText2</DataField>
+        </Field>
+        <Field Name="HeaderText1">
+          <DataField>HeaderText1</DataField>
+        </Field>
+        <Field Name="Quantity7">
+          <DataField>Quantity7</DataField>
+        </Field>
+        <Field Name="Quantity7Format">
+          <DataField>Quantity7Format</DataField>
+        </Field>
+        <Field Name="Quantity6">
+          <DataField>Quantity6</DataField>
+        </Field>
+        <Field Name="Quantity6Format">
+          <DataField>Quantity6Format</DataField>
+        </Field>
+        <Field Name="Quantity5">
+          <DataField>Quantity5</DataField>
+        </Field>
+        <Field Name="Quantity5Format">
+          <DataField>Quantity5Format</DataField>
+        </Field>
+        <Field Name="Quantity4">
+          <DataField>Quantity4</DataField>
+        </Field>
+        <Field Name="Quantity4Format">
+          <DataField>Quantity4Format</DataField>
+        </Field>
+        <Field Name="Quantity3">
+          <DataField>Quantity3</DataField>
+        </Field>
+        <Field Name="Quantity3Format">
+          <DataField>Quantity3Format</DataField>
+        </Field>
+        <Field Name="Quantity2">
+          <DataField>Quantity2</DataField>
+        </Field>
+        <Field Name="Quantity2Format">
+          <DataField>Quantity2Format</DataField>
+        </Field>
+        <Field Name="Quantity1">
+          <DataField>Quantity1</DataField>
+        </Field>
+        <Field Name="Quantity1Format">
+          <DataField>Quantity1Format</DataField>
+        </Field>
+        <Field Name="Amount7">
+          <DataField>Amount7</DataField>
+        </Field>
+        <Field Name="Amount7Format">
+          <DataField>Amount7Format</DataField>
+        </Field>
+        <Field Name="Amount6">
+          <DataField>Amount6</DataField>
+        </Field>
+        <Field Name="Amount6Format">
+          <DataField>Amount6Format</DataField>
+        </Field>
+        <Field Name="Amount5">
+          <DataField>Amount5</DataField>
+        </Field>
+        <Field Name="Amount5Format">
+          <DataField>Amount5Format</DataField>
+        </Field>
+        <Field Name="Amount4">
+          <DataField>Amount4</DataField>
+        </Field>
+        <Field Name="Amount4Format">
+          <DataField>Amount4Format</DataField>
+        </Field>
+        <Field Name="Amount3">
+          <DataField>Amount3</DataField>
+        </Field>
+        <Field Name="Amount3Format">
+          <DataField>Amount3Format</DataField>
+        </Field>
+        <Field Name="Amount2">
+          <DataField>Amount2</DataField>
+        </Field>
+        <Field Name="Amount2Format">
+          <DataField>Amount2Format</DataField>
+        </Field>
+        <Field Name="Amount1">
+          <DataField>Amount1</DataField>
+        </Field>
+        <Field Name="Amount1Format">
+          <DataField>Amount1Format</DataField>
+        </Field>
+        <Field Name="TotalQty">
+          <DataField>TotalQty</DataField>
+        </Field>
+        <Field Name="TotalQtyFormat">
+          <DataField>TotalQtyFormat</DataField>
+        </Field>
+        <Field Name="TotalAmt">
+          <DataField>TotalAmt</DataField>
+        </Field>
+        <Field Name="TotalAmtFormat">
+          <DataField>TotalAmtFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

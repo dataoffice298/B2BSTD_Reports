@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="ItemCategoryCode">
+          <DataField>ItemCategoryCode</DataField>
+        </Field>
+        <Field Name="ABCClassificationCapLbl">
+          <DataField>ABCClassificationCapLbl</DataField>
+        </Field>
+        <Field Name="FromDateCapLbl">
+          <DataField>FromDateCapLbl</DataField>
+        </Field>
+        <Field Name="ToDateCapLbl">
+          <DataField>ToDateCapLbl</DataField>
+        </Field>
+        <Field Name="CertACapLbl">
+          <DataField>CertACapLbl</DataField>
+        </Field>
+        <Field Name="CertBCapLbl">
+          <DataField>CertBCapLbl</DataField>
+        </Field>
+        <Field Name="CertCCapLbl">
+          <DataField>CertCCapLbl</DataField>
+        </Field>
+        <Field Name="ABCModelCapLbl">
+          <DataField>ABCModelCapLbl</DataField>
+        </Field>
+        <Field Name="TotalAmountCapLbl">
+          <DataField>TotalAmountCapLbl</DataField>
+        </Field>
+        <Field Name="ItemGroupCapLbl">
+          <DataField>ItemGroupCapLbl</DataField>
+        </Field>
+        <Field Name="ItemNoCapLbl">
+          <DataField>ItemNoCapLbl</DataField>
+        </Field>
+        <Field Name="ItemNameCapLbl">
+          <DataField>ItemNameCapLbl</DataField>
+        </Field>
+        <Field Name="CalculatedCapLbl">
+          <DataField>CalculatedCapLbl</DataField>
+        </Field>
+        <Field Name="AmountCapLbl">
+          <DataField>AmountCapLbl</DataField>
+        </Field>
+        <Field Name="InventoryCapLbl">
+          <DataField>InventoryCapLbl</DataField>
+        </Field>
+        <Field Name="QuantityCapLbl">
+          <DataField>QuantityCapLbl</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+        </Field>
+        <Field Name="CertA">
+          <DataField>CertA</DataField>
+        </Field>
+        <Field Name="CertAFormat">
+          <DataField>CertAFormat</DataField>
+        </Field>
+        <Field Name="CertB">
+          <DataField>CertB</DataField>
+        </Field>
+        <Field Name="CertBFormat">
+          <DataField>CertBFormat</DataField>
+        </Field>
+        <Field Name="CertC">
+          <DataField>CertC</DataField>
+        </Field>
+        <Field Name="CertCFormat">
+          <DataField>CertCFormat</DataField>
+        </Field>
+        <Field Name="ABCModel">
+          <DataField>ABCModel</DataField>
+        </Field>
+        <Field Name="Classified">
+          <DataField>Classified</DataField>
+        </Field>
+        <Field Name="TotalILEAmount">
+          <DataField>TotalILEAmount</DataField>
+        </Field>
+        <Field Name="TotalILEAmountFormat">
+          <DataField>TotalILEAmountFormat</DataField>
+        </Field>
+        <Field Name="TotalILEQuantity">
+          <DataField>TotalILEQuantity</DataField>
+        </Field>
+        <Field Name="TotalILEQuantityFormat">
+          <DataField>TotalILEQuantityFormat</DataField>
+        </Field>
+        <Field Name="ILEQuantity">
+          <DataField>ILEQuantity</DataField>
+        </Field>
+        <Field Name="ILEQuantityFormat">
+          <DataField>ILEQuantityFormat</DataField>
+        </Field>
+        <Field Name="ILEAmount">
+          <DataField>ILEAmount</DataField>
+        </Field>
+        <Field Name="ILEAmountFormat">
+          <DataField>ILEAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
